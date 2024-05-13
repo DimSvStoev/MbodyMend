@@ -1,0 +1,560 @@
+/* Add your CSS styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg1: #02304b;
+    --bg2: #063c5c;
+    --body: #959DCC;
+    --brand: #a5f70db2;
+    --white: #fff;
+}
+
+body {
+    font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body);
+    line-height: 1.8;
+    background-color: var(--bg1);
+    background: linear-gradient(to right, #02304b, rgba(27, 31, 52, 0.0)), url(../img/procedureBG4.png);
+    padding-top: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h6 {
+    font-family: "Dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a5f70db2;
+}
+
+a {
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.7s ease;
+}
+
+.link-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+
+.link-more .icon {
+    transition: all 0.4s ease;
+}
+
+.link-more:hover .icon {
+    transform: translateX(8px);
+}
+
+a:hover {
+    color: var(--brand);
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.btn {
+    padding: 16px 36px;
+    font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.4 ease;
+    border-radius: 0;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #02304b, rgba(27, 31, 52, 0.0));
+}
+
+.navbar .navbar-nav .nav-link.custom-active {
+    color: var(--brand) !important;
+}
+
+.navbar-brand {
+    font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+/*Button Appointment */
+#sticky-button {
+    top: 90px;
+}
+
+/* Banner */
+.banner-img {
+    background-blend-mode: multiply;
+    width: 100px;
+    height: auto;
+}
+
+.page-title-bar{
+    display: block;
+    height: 300px;
+    background-size: cover;
+    background-position: center; /* За да центрира картинката */
+    opacity: 0.8; /* Например, тук може да поставите стойност между 0 и 1, където 0 е напълно прозрачно, а 1 е напълно непрозрачно */
+}
+
+.page-title-bar-center{
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.page-title-bar-row{
+    margin: auto;
+    max-width: 1170px;
+    height: 100%;
+}
+
+.page-title-bar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.page-title-bar-captions{
+    text-align: center;
+    width: 100%;
+}
+
+#page-title-bar-text{
+    font-size: 54px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); color: rgba(255, 255, 255, 0.9); -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+}
+/* HERO */
+#hero-section {
+
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#appointment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#appointment-cnt {
+    display: flex;
+    width: 50%;
+}
+
+.hero-section-textcontent {
+    display: flex;
+    flex-direction: column;
+    background-color:#02304b;
+    max-width: 50%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 2%;
+    margin-right: 5%;
+    
+}
+
+.title-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 20%;    
+}
+
+.main-text-para {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#hero-section p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: chartreuse
+    
+}
+
+.hero-section-img {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-section-img img{
+    border-radius: 10px; /* Променете стойността според вашите предпочитания за заобляне */
+    box-shadow: 0 0 15px rgb(255, 255, 255); /* Променете стойността на размазването и цвета на сянката */
+    height: 200px;
+    width: 200px;
+}
+
+#price-list {
+    margin-left: 0;
+    border-radius: 13px !important;
+    display: flex;
+    justify-content: start !important;
+}
+
+
+/* Медия запитвания за по-малки екрани */
+@media (max-width: 768px) {
+    #hero-section {
+        background-size: contain;
+        /* Променете размера на фоновата картинка на 'contain' за по-малки екрани */
+        background-size: cover;
+        /* Промяна на размера на фоновата картинка на 'cover' за малки екрани */
+    }
+}
+
+
+
+/* HERO */
+
+/*Apoinment btn */
+.btn-brand {
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn-brand:hover {
+    background-color: var(--brand);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-outline-brand {
+    background-color: var(--brand);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16.5px;
+}
+
+.btn-outline-brand:hover {
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+
+
+/* DISPLAY RESPONSE STYLES */
+
+/*BUTONS*/
+@media (max-width: 1470px) {
+    .btn {
+        font-size: 14px;
+        /* Намалете размера на шрифта */
+        width: auto;
+        /* Задайте ширината на бутона да бъде автоматично определена от съдържанието му */
+        padding: 8px 16px;
+        /* Променете padding за подходящ размер на бутона */
+        border-radius: 20px;
+        /* Задайте подходящ border-radius */
+        font-weight: 600;
+        /* Задайте подходящо font-weight */
+    }
+}
+
+@media (max-width: 1470px) {
+    .btn-outline-brand {
+        font-size: 12px !important;
+        white-space: nowrap !important;
+        /* Позволява текстът на линковете да се събира на един ред */
+        width: auto;
+        /* Задайте ширината на бутона да бъде автоматично определена от съдържанието му */
+        margin-left: 0;
+    }
+}
+
+/* NAVBAR DRS*/
+@media (min-width: 922px) and (max-width: 1268px) {
+    .navbar .container {
+        margin-left: 2.66667%;
+        white-space: nowrap;
+    }
+
+    .navbar-brand {
+        margin-right: 3.66667%;
+        white-space: nowrap;
+        font-size: 23;
+    }
+
+    .logo {
+        width: 120px;
+        /* Максимална ширина на логото да бъде равна на ширината на картинката */
+        height: auto;
+        /* Задава височината да бъде автоматично определена, за да запази пропорциите */
+    }
+}
+
+
+/* FOOTER */
+@media (min-width: 1000px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 110px;
+    }
+
+    #social-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .footer-container p {
+        margin: 0;
+    }
+
+    .footer-container h2 {}
+
+}
+
+@media (max-width: 999px) and (min-width:700px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 85px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 70%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 150%;
+    }
+}
+
+
+@media (max-width: 699px) and (min-width:600px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 80px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 70%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 110%;
+    }
+
+}
+
+@media (max-width: 599px) and (min-width:450px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 60px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 50%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 90%;
+    }
+
+}
+
+@media (max-width: 449px){
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 50px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 40%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 50%;
+    }
+
+}
+
+

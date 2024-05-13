@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg1: #02304b;
+    --bg2: #063c5c;
+    --body: #959DCC;
+    --brand: #a5f70db2;
+    --white: #fff;
+}
+
+body {
+    font-family: "inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body);
+    line-height: 1.8;
+    background-color: var(--bg1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 35px;
+}
+
+h6 {
+    font-family: "dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a5f70db2;
+    font-size: 25px;
+    
+}
+
+a {
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.7s ease;
+}
+
+.link-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+
+.link-more .icon {
+    transition: all 0.4s ease;
+}
+
+.link-more:hover .icon {
+    transform: translateX(8px);
+}
+
+
+a:hover {
+    color: var(--brand);
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 160px
+}
+
+.btn {
+    padding: 16px 36px;
+    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.4 ease;
+    border-radius: 0;
+}
+
+/*INTRO */
+.intro {
+    margin-bottom: 60px;
+}
+
+.intro h6 {
+    columns: var(--brand);
+}
+
+.intro p {
+    max-width: 500px;
+    margin: auto;
+}
+
+.cta-btns {
+    margin-top: 60px;
+}
+
+.intro h1 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #02304b, rgba(27, 31, 52, 0.0));
+}
+
+.navbar .navbar-nav .nav-link.custom-active {
+    color: var(--brand) !important;
+}
+
+.navbar-brand {
+    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+
+}
+
+/*Button Appointment */
+
+#sticky-button {
+    top: 90px;
+    /* височина на навигационния бар */
+}
+
+/*Button Appointment */
+
+/* Banner */
+.banner-img {
+    background-blend-mode: multiply;
+    width: 100px;
+    height: auto;
+}
+
+/* HERO */
+#hero {
+    background: linear-gradient(to right, #02304b, rgba(27, 31, 52, 0.0)), url(../img/cover_1.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+/* Медия запитвания за по-малки екрани */
+@media (max-width: 768px) {
+    #hero {
+        background-size: contain;
+        /* Променете размера на фоновата картинка на 'contain' за по-малки екрани */
+        background-size: cover;
+        /* Промяна на размера на фоновата картинка на 'cover' за малки екрани */
+    }
+}
+
+#hero p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* HERO */
+
+
+
+/*Apoinment btn */
+
+
+.btn-brand {
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn-brand:hover {
+    background-color: var(--brand);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-outline-brand {
+    background-color: var(--brand);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16.5px;
+}
+
+.btn-outline-brand:hover {
+    background-color: transparent;
+    color: var(--brand);
+    border-color: var(--brand);
+}
+
+/*ABOUT*/
+
+#about {
+    position: relative;
+}
+
+#about::after {
+    content: "";
+    width: 25%;
+    height: 100%;
+    background-color: var(--brand);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#about h6 {
+    color: var(--brand);
+}
+
+#about h1 {
+    margin-top: 16px;
+    margin-bottom: 24px
+}
+
+#about .signature {
+    width: unset;
+}
+
+/*SERVICE */
+
+#services {
+    background: var(--bg2);
+}
+
+#services .service .content {
+    padding: 32px;
+}
+
+#services .service p {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/*MILESTONE*/
+
+#milestone {
+    background: linear-gradient(to right, rgba(2, 48, 75, 1.2), rgba(27, 31, 52, 0.0)), linear-gradient(to left, rgba(2, 48, 75, 1.2), rgba(27, 31, 52, 0.0)), url(../img/cover_2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 325px;
+}
+
+#milestone h1 {
+    color: var(--brand);
+}
+
+/* FEATURES */
+#features-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--bg1);
+}
+
+.features-section-text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.features-section-text h1,
+.features-section-text h6 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#feature-section-text-para{
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-bottom: 2%;
+}
+
+.feature-row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+
+.feature-container {
+    display: flex;
+    flex-direction: row;
+    width: 18%;
+    margin-left: 2%;
+}
+
+.feature-container .icon-feature {
+    width: 100%; /* Настройва ширината на изображението да бъде 100% от размера на родителския елемент */
+    height: auto; /* Автоматична височина, за да запази пропорциите на изображението */
+    max-height: 60px;
+    max-width: 60px;
+}
+
+.feature-img{
+    width: 23%;
+}
+
+#features-section .feature-text{
+    margin-top: 8%;
+
+}
+
+.feature-link-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 1px;
+}
+
+.feature-link-more .icon {
+    transition: all 0.4s ease;
+}
+
+.feature-link-more:hover .icon {
+    transform: translateX(8px);
+}
+
+.feature-text h5 {
+    font-size: 17px;
+}
+
+/*SOCIAL ICONS */
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    background-color: var(--bg1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    background-color: var(--brand);
+    color: var(--bg2);
+}
+
+/* TEAM */
+
+#team {
+    background-color: var(--bg2);
+}
+
+.team-member {
+    position: relative;
+}
+
+.team-member .social-links {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.team-member:hover .social-links {
+    opacity: 1;
+    top: 30px;
+}
+
+/*  REVIEWS */
+
+#reviews {
+    background-color: var(--bg1);
+}
+
+.review {
+    padding: 32px;
+    background-color: var(--bg2);
+    position: relative;
+}
+
+.review .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand);
+    color: var(--bg1);
+    border-radius: 100px;
+    position: absolute;
+    right: 32px;
+}
+
+.review img {
+    width: 60px;
+    border-radius: 100px;
+}
+
+/* BLOG */
+#blog {
+    background-color: var(--bg2);
+}
+
+.blog-post {
+    position: relative;
+}
+
+.blog-post .date {
+    width: 100px;
+    height: 100px;
+    background-color: var(--brand);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.blog-post .day {
+    font-size: 32px;
+    line-height: 1;
+    color: var(--bg1);
+    font-family: "Dela Gothic One", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-post .year {
+    color: var(--bg1);
+}
+
+
+/* BOOKING */
+#booking{
+    background: linear-gradient(to right, rgba(2, 48, 75, 0.8), rgba(27, 31, 52, 0.0)), linear-gradient(to left, rgba(2, 48, 75, 0.8), rgba(27, 31, 52, 0.0)), url(../img/cover_2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#booking form{
+    background-color: var(--bg1);
+    padding: 32px;
+}
+
+#booking form .form-control{
+    background-color: var(--bg1);
+    border-radius: 0;
+    margin-top: 16px;
+    border-color: var(--bg2);
+}
+
+#booking form input{
+    height: 58px;
+}
+
+#booking form input:focus{
+    height: 58px;
+}
+
+
+/* DISPLAY RESPONSE STYLES */
+
+/*BUTONS*/
+@media (max-width: 1470px) {
+    .btn {
+        font-size: 14px;
+        /* Намалете размера на шрифта */
+        width: auto;
+        /* Задайте ширината на бутона да бъде автоматично определена от съдържанието му */
+        padding: 8px 16px;
+        /* Променете padding за подходящ размер на бутона */
+        border-radius: 20px;
+        /* Задайте подходящ border-radius */
+        font-weight: 600;
+        /* Задайте подходящо font-weight */
+    }
+}
+
+@media(max-width:1470px) {
+    .btn-outline-brand {
+        font-size: 12px !important;
+        white-space: nowrap !important;
+        /* Позволява текстът на линковете да се събира на един ред */
+        width: auto;
+        /* Задайте ширината на бутона да бъде автоматично определена от съдържанието му */
+        margin-left: 0;
+    }
+}
+
+
+/* NAVBAR DRS*/
+
+@media(min-width:922px) and (max-width: 1268px) {
+    .navbar .container {
+        margin-left: 2.66667%;
+        white-space: nowrap;
+    }
+
+    @media(min-width:922px) and (max-width: 1268px) {
+        .navbar-brand {
+            margin-right: 3.66667%;
+            white-space: nowrap;
+            font-size: 23;
+        }
+
+        @media(min-width:992px) and (max-width: 1030px) {
+            .logo {
+                width: 120px;
+                /* Максимална ширина на логото да бъде равна на ширината на картинката */
+                height: auto;
+                /* Задава височината да бъде автоматично определена, за да запази пропорциите */
+            }
+        }
+    }
+}
+
+/* MAPS */
+.maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+
+/* FOOTER */
+@media (min-width: 1000px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 110px;
+    }
+
+    #social-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .footer-container p {
+        margin: 0;
+    }
+
+    .footer-container h2 {}
+
+}
+
+@media (max-width: 999px) and (min-width:700px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 85px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 70%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 150%;
+    }
+}
+
+
+@media (max-width: 699px) and (min-width:600px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 80px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 70%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 110%;
+    }
+
+}
+
+@media (max-width: 599px) and (min-width:450px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 60px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 50%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 90%;
+    }
+
+}
+
+@media (max-width: 449px){
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--bg2);
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        height: 50px;
+    }
+
+    #social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #social-icons img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .footer-container p {
+        margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 40%;
+    }
+
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 50%;
+    }
+
+}
+
+
+
+/* REVIEWS */
+#response-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color:;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 300px; /* Добавено максимална височина */
+    overflow: auto; /* Преливане на излишното съдържание */
+}
+
+.review {
+    flex: 0 0 calc(20% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.author-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 0;
+}
+
+.rating::after {
+    content: "★★★★★";
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.text {
+    font-size: 14px;
+}
+
+.profile-image {
+    max-width: 10%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.review-image {
+    max-width: 10%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}

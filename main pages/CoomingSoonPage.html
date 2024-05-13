@@ -1,0 +1,149 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="remixicons/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/tecar-therapy.css">
+
+  <title>Pearl Barber Salon - Bootstrap Template</title>
+</head>
+
+<body id="home" data-bs-spy="scroll" data-bs-target=".navbar">
+
+
+<!-- HERO -->
+<div id="appointment">
+  <div id="appointment-cnt">
+  <div style="display: flex; justify-content: center; margin-top: 20%; margin-left: 10%;"><h2>Извършваме профилактика, скоро ще бъдем достъпни</h2></div>
+</div>
+</div>
+<!-- // HERO -->
+
+
+<!--//FOOTER-->
+<footer id="site-footer" style="position: bottom">
+  <div class="footer-container">
+    <div id="footer-logo">
+      <img src="./img/logo_3.png" alt="банер">
+    </div>
+  </div>
+  <div class="footer-container">
+    <div>
+      <h2>Запазете час</h2>
+      <p style="margin-bottom: 30%; font-size: 110%;">+359 88 419 4340</p>
+    </div>
+  </div>
+  <div class="footer-container">
+    <address>
+      <h2>Адрес</h2>
+      <p>гр. София,</p>
+      <p>ул. Митрополит Серафим Сливенски 142</p>
+    </address>
+  </div>
+  <div class="footer-container">
+    <div>
+      <h2>Работно време</h2>
+      <p>Пон.-Петък 09:00 – 19:00</p>
+      <p>Събота 10:00 – 17:00</p>
+    </div>
+  </div>
+  <div class="footer-container">
+    <h2>Последвайте ни</h2>
+    <div id="social-icons">
+      <div style="margin-right: 20%;">
+        <a href="https://www.facebook.com/mbodymend" target="_blank" rel="noopener noreferrer">
+          <img src="./img/square-facebook.svg" alt="Facebook" style="width: 50px; height: 50px;">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/mbodymend/" target="_blank" rel="noopener noreferrer">
+          <img src="./img/square-instagram.svg" alt="Instagram" style="width: 50px; height: 50px; margin: 0;">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Функция за добавяне на event listener на бутоните
+  function addClickListenerToButtons(parentElement) {
+      // Избираме всички <a> елементи с клас .sc-gGmIRh в родителския елемент
+      var buttons = parentElement.querySelectorAll('.sc-gGmIRh');
+      // Проверка дали са намерени бутони
+      if (buttons.length > 0) {
+          console.log('Бутоните са намерени');
+          // Итерираме през всички бутони и добавяме event listener за клик на всеки от тях
+          buttons.forEach(function(button) {
+              button.addEventListener('click', function() {
+                  // Добавете тук кода, който да се изпълни при клик на бутона
+                  console.log('Бутонът е кликнат');
+              });
+          });
+      } else {
+          console.log('Не са намерени бутони');
+      }
+  }
+
+  // Функция за проверка на наличието на елемента .appointlet-inline
+  function checkAppointletInline() {
+      // Избираме елемента по клас
+      var appointletInline = document.querySelector('.appointlet-inline[data-appointlet-inline="https://appt.link/meet-with-mina-karaivanova-xrEXuKac/in-person-meeting"][data-appointlet-registered]');
+      // Проверка дали елементът е наличен
+      if (appointletInline) {
+          console.log('Родителският елемент .appointlet-inline е наличен');
+          // Получаваме iframe елемента в родителския документ
+          var iframe = appointletInline.querySelector('iframe');
+          // Проверка дали iframe елемента е наличен
+          if (iframe) {
+              console.log('Iframe-ът е наличен');
+              // Получаваме достъп до документа в iframe
+              var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+              // Извикваме функцията за добавяне на event listener на бутоните вътре в iframe
+              addClickListenerToButtons(iframeDoc);
+          } else {
+              console.log('Iframe-ът не е намерен или не съдържа body');
+          }
+      } else {
+          console.log('Родителският елемент .appointlet-inline не е намерен');
+      }
+  }
+
+  // Функция за стартиране на проверката за наличието на елементи .appointlet-inline
+  function startCheckingAppointletInline() {
+      // Задаваме интервал за проверка
+      var interval = setInterval(function() {
+          // Проверяваме за наличие на елемента .appointlet-inline
+          checkAppointletInline();
+      }, 3000); // Проверка на всеки 3 секунди
+  }
+
+  // Изчакваме зареждането на цялата страница преди да започнем проверката
+  window.addEventListener('load', function() {
+      startCheckingAppointletInline();
+  });
+
+</script>
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+<!--
+id="maps-frame"
+
+<div class="">
+  <iframe class="location" loading="lazy" src="https://maps.google.com/maps?q=ul.%20%22Mitropolit%20Serafim%20Slivenski%22%20142%2C%201750%20Mladost%201%2C%20Sofia&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="ul. &quot;Mitropolit Serafim Slivenski&quot; 142, 1750 Mladost 1, Sofia" aria-label="ul. &quot;Mitropolit Serafim Slivenski&quot; 142, 1750 Mladost 1, Sofia"></iframe>
+</div> 
