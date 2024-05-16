@@ -179,8 +179,11 @@ section {
     flex-direction: row;
     justify-content: start;
     margin-left: 2%;
-    margin-right: 5%;
-    
+    margin-right: 5%;    
+}
+
+#adapt-screen-jpg {
+    display: none;
 }
 
 .title-text {
@@ -209,11 +212,13 @@ section {
     flex-direction: row;
 }
 
-.hero-section-img img{
+.hero-section-img img {
     border-radius: 10px; /* Променете стойността според вашите предпочитания за заобляне */
     box-shadow: 0 0 15px rgb(255, 255, 255); /* Променете стойността на размазването и цвета на сянката */
-    height: 200px;
-    width: 200px;
+    max-width: 100%; /* Гарантира, че изображението не надвишава ширината на родителския си контейнер */
+    max-height: 40%;
+    height: auto; /* Позволява на изображението да запази съотношението на страните и да не се изкривява */
+    
 }
 
 #price-list {
@@ -226,15 +231,39 @@ section {
 
 /* Медия запитвания за по-малки екрани */
 @media (max-width: 768px) {
-    #hero-section {
-        background-size: contain;
-        /* Променете размера на фоновата картинка на 'contain' за по-малки екрани */
-        background-size: cover;
-        /* Промяна на размера на фоновата картинка на 'cover' за малки екрани */
-    }
+
+    
+        .hero-section-img img{
+            max-width: 90%;
+            max-height: 10%;           
+        }
+
+        .hero-section-img {
+            width: auto; /* Разширява се в зависимост от размера на изображението */
+            max-width: 90%; /* Максимална ширина за адаптивност */
+            height: auto; /* Разширява се в зависимост от размера на изображението */
+            display: none;
+        }
+
+        .hero-section-textcontent{
+            max-width: 90%
+        }
+
+        #main-jpg-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        #adapt-screen-jpg{
+            display: block;
+            border-radius: 10px; /* Променете стойността според вашите предпочитания за заобляне */
+            box-shadow: 0 0 15px rgb(255, 255, 255); /* Променете стойността на размазването и цвета на сянката */
+            max-width: 150px; /* Гарантира, че изображението не надвишава ширината на родителския си контейнер */
+            max-height: 170px;
+            height: auto; /* Позволява на изображението да запази съотношението на страните и да не се изкривява */
+        }
 }
-
-
 
 /* HERO */
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
 
+/* Common options */
 :root {
     --bg1: #02304b;
     --bg2: #063c5c;
@@ -75,6 +76,66 @@ section {
     transition: all 0.4 ease;
     border-radius: 0;
 }
+
+/* Common options Responsibility*/
+
+@media (max-width: 768px) {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+    font-size: 20px;
+}
+
+h6 {
+
+    font-size: 15px;   
+}
+
+p {
+ font-size: 13px;   
+}
+
+.link-more {
+
+    font-size: 13px;
+
+}
+
+.link-more .icon {
+    transition: all 0.4s ease;
+}
+
+.link-more:hover .icon {
+    transform: translateX(8px);
+}
+
+
+a:hover {
+    color: var(--brand);
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 160px;
+    padding-bottom: 160px
+}
+
+.btn {
+    padding: 16px 36px;
+    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.4 ease;
+    border-radius: 0;
+}
+
+}
+
 
 /*INTRO */
 .intro {
@@ -330,6 +391,42 @@ section {
     font-size: 17px;
 }
 
+@media (max-width: 768px) {
+
+    #feature-section-text-para{
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-bottom: 2%;
+    }
+    
+    .feature-text h5 {
+        font-size: 11px;
+    }
+
+    .feature-img{
+        width: 70%;
+            }
+
+
+            .feature-container {
+                display: flex;
+                flex-direction: row;
+                width: 25%;
+                margin-left: 3%;
+            }
+            
+            .feature-link-more {
+                font-size: 10px;
+                font-weight: 600;
+            }
+}
+
+
+
+
+
+
+
 /*SOCIAL ICONS */
 
 .social-links a {
@@ -490,32 +587,6 @@ section {
     }
 }
 
-
-/* NAVBAR DRS*/
-
-@media(min-width:922px) and (max-width: 1268px) {
-    .navbar .container {
-        margin-left: 2.66667%;
-        white-space: nowrap;
-    }
-
-    @media(min-width:922px) and (max-width: 1268px) {
-        .navbar-brand {
-            margin-right: 3.66667%;
-            white-space: nowrap;
-            font-size: 23;
-        }
-
-        @media(min-width:992px) and (max-width: 1030px) {
-            .logo {
-                width: 120px;
-                /* Максимална ширина на логото да бъде равна на ширината на картинката */
-                height: auto;
-                /* Задава височината да бъде автоматично определена, за да запази пропорциите */
-            }
-        }
-    }
-}
 
 /* MAPS */
 .maps{
@@ -776,7 +847,6 @@ section {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
-    background-color:;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
