@@ -404,27 +404,34 @@ section {
     }
 
     .feature-img{
-        width: 70%;
+        width: 30%;
             }
 
 
             .feature-container {
-                display: flex;
-                flex-direction: row;
-                width: 25%;
-                margin-left: 3%;
+                width: 100%; /* Задава ширината на всеки елемент да бъде 100% от колоната */
+                margin-left: 0; /* Премахва лявото отместване */
             }
             
             .feature-link-more {
                 font-size: 10px;
                 font-weight: 600;
             }
+
+            .feature-row-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Две колони с равна ширина */
+                gap: 16px; /* Отстояние между елементите */
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+
+            #response-container{
+                display: flex;
+                flex-direction: column;
+            }
+
 }
-
-
-
-
-
 
 
 /*SOCIAL ICONS */
@@ -466,35 +473,17 @@ section {
     top: 30px;
 }
 
-/*  REVIEWS */
 
-#reviews {
-    background-color: var(--bg1);
-}
 
-.review {
-    padding: 32px;
-    background-color: var(--bg2);
-    position: relative;
-}
 
-.review .icon {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--brand);
-    color: var(--bg1);
-    border-radius: 100px;
-    position: absolute;
-    right: 32px;
-}
 
-.review img {
-    width: 60px;
-    border-radius: 100px;
-}
+
+
+
+
+
+
+
 
 /* BLOG */
 #blog {
@@ -840,6 +829,41 @@ section {
 
 
 /* REVIEWS */
+
+.review {
+    flex: 0 0 calc(20% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.9;
+    background-color: var(--bg1);
+    display: flex;
+    flex-direction: column; /* За да се подредят елементите вертикално */
+    align-items: flex-start; /* За подравняване на елементите в ляво */
+}
+
+.review .profile-image {
+    width: 80px; /* Увеличаване на размера на профилните изображения */
+    height: 80px; /* Добавяне на фиксирана височина */
+    border-radius: 100px;
+    margin-right: 10px; /* Разстояние между аватара и името */
+}
+
+.review .text {
+    display: block; /* Показва текста по подразбиране */
+}
+
+.expand-button {
+    display: none; /* По подразбиране бутонът е скрит */
+    background-color: var(--brand);
+    color: var(--bg1);
+    border: none;
+    padding: 4px 8px; /* Намаляване на размера на бутона */
+    font-size: 12px; /* Намаляване на размера на шрифта */
+    cursor: pointer;
+    margin-top: 8px;
+}
+
 #response-container {
     display: flex;
     flex-direction: row;
@@ -854,12 +878,9 @@ section {
     overflow: auto; /* Преливане на излишното съдържание */
 }
 
-.review {
-    flex: 0 0 calc(20% - 20px);
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    opacity: 0.9;
+.author-container {
+    display: flex;
+    align-items: center; /* Подравнява елементите в центъра по вертикала */
 }
 
 .author-name {
@@ -877,26 +898,35 @@ section {
     color: #FFD700;
 }
 
-.text {
-    font-size: 14px;
-}
+@media (max-width: 768px) {
+    .review {
+        display: none; /* Скрива всички ревюта по подразбиране */
+        width: 100%; /* Ширина 100% за ревюта на малки екрани */
+    }
 
-.profile-image {
-    max-width: 10%;
-    height: auto;
-    border-radius: 50%;
-}
+    .review.active {
+        display: flex; /* Показва само активното ревю */
+        height: 100% !important;
+    }
 
-.image-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-top: 10px;
-}
+    .carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: -webkit-sticky; /* Поддръжка за Safari */
+        position: sticky;
+        top: 0; /* Залепва в горната част на контейнера */
 
-.review-image {
-    max-width: 10%;
-    height: auto;
-    border-radius: 5px;
-    margin-right: 10px;
+        padding: 10px 0; /* Допълнителен падинг за бутоните */
+        z-index: 1; /* Уверете се, че бутоните са над съдържанието */
+    }
+
+    .carousel-button {
+        background-color: var(--brand);
+        color: var(--bg1);
+        border: none;
+        padding: 4px 8px;
+        font-size: 12px;
+        cursor: pointer;
+    }
 }
