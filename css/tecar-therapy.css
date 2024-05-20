@@ -215,8 +215,8 @@ section {
 .hero-section-img img {
     border-radius: 10px; /* Променете стойността според вашите предпочитания за заобляне */
     box-shadow: 0 0 15px rgb(255, 255, 255); /* Променете стойността на размазването и цвета на сянката */
-    max-width: 100%; /* Гарантира, че изображението не надвишава ширината на родителския си контейнер */
-    max-height: 40%;
+    max-width: 70%; /* Гарантира, че изображението не надвишава ширината на родителския си контейнер */
+    max-height: 60%;
     height: auto; /* Позволява на изображението да запази съотношението на страните и да не се изкривява */
     
 }
@@ -226,6 +226,10 @@ section {
     border-radius: 13px !important;
     display: flex;
     justify-content: start !important;
+}
+
+#ulStyle{
+    padding-left: 100px;
 }
 
 
@@ -262,6 +266,10 @@ section {
             max-width: 150px; /* Гарантира, че изображението не надвишава ширината на родителския си контейнер */
             max-height: 170px;
             height: auto; /* Позволява на изображението да запази съотношението на страните и да не се изкривява */
+        }
+
+        #ulStyle{
+            padding-left: 50px;
         }
 }
 
@@ -349,7 +357,8 @@ section {
 
 
 /* FOOTER */
-@media (min-width: 1000px) {
+
+@media (min-width: 769px) {
     .footer {
         display: flex;
         flex-direction: row;
@@ -357,187 +366,44 @@ section {
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        height: 200px;
+        align-items: flex-start;
     }
-
     .footer-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        margin-top: 35px;
         text-align: center;
     }
-
     #footer-logo img {
-        height: 110px;
+        height: 130px;
     }
-
     #social-icons img {
-        width: 50px;
-        height: 50px;
-    }
-
-    #social-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-    }
-
-    .footer-container p {
-        margin: 0;
-    }
-
-    .footer-container h2 {}
-
-}
-
-@media (max-width: 999px) and (min-width:700px) {
-    .footer {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--bg2);
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #footer-logo img {
-        height: 85px;
-    }
-
-    #social-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #social-icons img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .footer-container p {
-        margin: 0;
-        text-size-adjust: none;
-        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 70%;
-    }
-
-    .footer-container h2 {
-        text-size-adjust: none;
-        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 150%;
-    }
-}
-
-
-@media (max-width: 699px) and (min-width:600px) {
-    .footer {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--bg2);
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #footer-logo img {
-        height: 80px;
-    }
-
-    #social-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #social-icons img {
-        width: 40px;
-        height: 40px;
-        margin: 0;
-    }
-
-    .footer-container p {
-        margin: 0;
-        text-size-adjust: none;
-        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 70%;
-    }
-
-    .footer-container h2 {
-        text-size-adjust: none;
-        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 110%;
-    }
-
-}
-
-@media (max-width: 599px) and (min-width:450px) {
-    .footer {
-        display: flex;
-        flex-direction: row;
-        background-color: var(--bg2);
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #footer-logo img {
+        width: 60px;
         height: 60px;
+        margin: 4px;
     }
-
     #social-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content:center;
     }
-
-    #social-icons img {
-        width: 30px;
-        height: 30px;
-        margin: 0;
-    }
-
     .footer-container p {
         margin: 0;
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 50%;
+        font-size: 20px;
     }
-
     .footer-container h2 {
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 90%;
+        font-size: 25px;
     }
-
 }
 
-@media (max-width: 449px){
+
+@media (max-width: 768px){
     .footer {
         display: flex;
         flex-direction: row;
@@ -545,18 +411,20 @@ section {
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        height: 180px;
+        align-items: flex-start;
     }
 
     .footer-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        margin-top: 35px;
         text-align: center;
     }
 
     #footer-logo img {
-        height: 50px;
+        display: none;
     }
 
     #social-icons {
@@ -566,8 +434,8 @@ section {
     }
 
     #social-icons img {
-        width: 20px;
-        height: 20px;
+        width: 45px;
+        height: 45px;
         margin: 0;
     }
 
@@ -575,15 +443,14 @@ section {
         margin: 0;
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 40%;
+        font-size: 10px;
     }
 
     .footer-container h2 {
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 50%;
+        font-size: 12px;
     }
-
 }
 
 

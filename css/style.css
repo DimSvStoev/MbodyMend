@@ -373,7 +373,7 @@ section {
 .feature-link-more {
     display: inline-flex;
     align-items: center;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     left: 1px;
@@ -388,7 +388,7 @@ section {
 }
 
 .feature-text h5 {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {
@@ -598,30 +598,40 @@ section {
         justify-content: space-around;
         align-items: center;
         width: 100%;
+        height: 200px;
+        align-items: flex-start;
     }
     .footer-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        margin-top: 35px;
         text-align: center;
     }
     #footer-logo img {
-        height: 110px;
+        height: 130px;
     }
     #social-icons img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
+        margin: 4px;
     }
     #social-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content:center;
     }
     .footer-container p {
         margin: 0;
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 20px;
     }
-    .footer-container h2 {}
+    .footer-container h2 {
+        text-size-adjust: none;
+        /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
+        font-size: 25px;
+    }
 }
 
 
@@ -634,18 +644,19 @@ section {
         align-items: center;
         width: 100%;
         height: 180px;
+        align-items: flex-start;
     }
 
     .footer-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        margin-top: 35px;
         text-align: center;
     }
 
     #footer-logo img {
-        height: 50px;
+        display: none;
     }
 
     #social-icons {
@@ -655,8 +666,8 @@ section {
     }
 
     #social-icons img {
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
         margin: 0;
     }
 
@@ -664,13 +675,13 @@ section {
         margin: 0;
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 50%;
+        font-size: 10px;
     }
 
     .footer-container h2 {
         text-size-adjust: none;
         /* Забранява мащабирането на текста във въртящи се устройства и ще запази оригиналния размер на шрифта.*/
-        font-size: 60%;
+        font-size: 12px;
     }
 }
 
