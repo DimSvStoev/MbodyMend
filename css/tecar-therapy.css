@@ -165,6 +165,13 @@ section {
     width: 50%;
 }
 
+/* Медия запитвания за по-малки екрани */
+@media (max-width: 768px) {
+    #appointment-cnt {
+        width: 100%;
+    }
+}
+
 .hero-section-textcontent {
     display: flex;
     flex-direction: column;
